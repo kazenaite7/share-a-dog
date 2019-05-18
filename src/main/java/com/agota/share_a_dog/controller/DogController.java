@@ -30,7 +30,7 @@ public class DogController {
         List<Dog> dogiai = repo.findAll();
         Dog dog = dogiai.get(0);
         Integer count = dogiai.size();
-        return ResponseEntity.ok(count);
+        return ResponseEntity.ok("we have " + count + " doggos");
         //return ResponseEntity.ok("Doggo number 1 \nBest dogggo #1");
     }
 

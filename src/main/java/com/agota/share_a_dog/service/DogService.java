@@ -15,7 +15,7 @@ public class DogService {
 
 
     public Dog borrowDog(Dog dog) {
-        dog.setBorrowed(true);
+        dog.setBorrowed(!dog.getBorrowed());
         repo.save(dog);
         return dog;
     }

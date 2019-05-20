@@ -12,12 +12,15 @@ public class User {
 
     private Double rate;
 
+    private String userId;
+
     public User() {
     }
 
-    public User(String name, Double rate) {
+    public User(String name, Double rate, String userId) {
         this.name = name;
         this.rate = rate;
+        this.userId = userId;
     }
 
     public String getName() {

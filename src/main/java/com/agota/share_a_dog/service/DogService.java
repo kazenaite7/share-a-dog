@@ -13,10 +13,14 @@ public class DogService {
     @Autowired
     private DogRepository repo;
 
+    @Autowired
+    private ContractService contractService;
 
-    public Dog borrowDog(Dog dog) {
+
+    public Dog borrowDog(Dog dog, String lowerId) {
         dog.setBorrowed(!dog.getBorrowed());
         repo.save(dog);
+        contractService.createContract(dog.getOwnerId(),lowerId);
         return dog;
     }
 

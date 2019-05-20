@@ -36,7 +36,7 @@ public class AdvertService {
         if (advert != null) {
             Dog dog = dogService.findDog(advert.getDogId());
             if (dog != null) {
-                dogService.borrowDog(dog);
+                dogService.borrowDog(dog, dog.getDogId());
                 return advert;
             }
         }

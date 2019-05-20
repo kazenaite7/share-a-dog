@@ -18,7 +18,7 @@ public class Dog {
 
     private Integer age;
 
-    private Integer ownerId;
+    private String ownerId;
 
     private Boolean isBorrowed;
 
@@ -28,7 +28,7 @@ public class Dog {
         isBorrowed = false;
     }
 
-    public Dog(String dogId, String name, String image, String bread, Integer age, Integer ownerId, Double size) {
+    public Dog(String dogId, String name, String image, String bread, Integer age, String ownerId, Double size) {
         this.dogId = dogId;
         this.name = name;
         this.image = image;
@@ -80,11 +80,11 @@ public class Dog {
         this.age = age;
     }
 
-    public Integer getOwnerId() {
+    public String getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(Integer ownerId) {
+    public void setOwnerId(String ownerId) {
         this.ownerId = ownerId;
     }
 
